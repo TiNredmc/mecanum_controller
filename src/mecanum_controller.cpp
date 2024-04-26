@@ -299,6 +299,7 @@ class mecanum_rbc : public rclcpp::Node{
 			robotOdom.child_frame_id			= robot_frame_id;
 			robotOdom.header.stamp 				= this->get_clock()->now();
 			robotOdom.twist.twist.linear.x 		= x_vel;
+			robotOdom.twist.twist.linear.y		= y_vel;
 			robotOdom.twist.twist.angular.z 	= az_vel;
 			robotOdom.pose.pose.orientation.x 	= xyz_angular.getX();
 			robotOdom.pose.pose.orientation.y 	= xyz_angular.getY();
